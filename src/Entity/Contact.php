@@ -25,12 +25,12 @@ class Contact
     /**
      * @ORM\Column(type="text")
      */
-    private $email;
+    public $email;
 
     /**
      * @ORM\Column(type="text")
      */
-    private $message;
+    public $message;
 
     public function getId(): ?int
     {

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Controller;
-
+use App\Entity\Contact;
 use App\Form\ContactType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -25,11 +25,11 @@ class ContactController extends AbstractController
             $contactFormData = $form->getData();
             
             $message = (new Email())
-                ->from($contactFormData['email'])
+                ->from($contactFormData->email)
                 ->to('daoudasouleymanecamara8@gmail.com')
                 ->subject('Vous avez reçu unn email')
-                ->text('Sender : '.$contactFormData['email'].\PHP_EOL.
-                    $contactFormData['Message'],
+                ->text('Sender : '.$contactFormData->email.\PHP_EOL.
+                    ($contactFormData->message),
                     'text/plain');
             $mailer->send($message);
 
