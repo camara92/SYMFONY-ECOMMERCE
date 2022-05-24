@@ -6,13 +6,15 @@
 		<meta name="description" content="Une boutique en ligne pour le commerce local ">
 		<meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
 		<meta name="generator" content="Jekyll v4.1.1">
+			<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.0/journal/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css" rel="stylesheet">
 		<title>
 			{% block title %}La boutique à 100% Daouda
 			{% endblock %}
 		</title>
 
 		<!-- Bootstrap core CSS -->
-		<link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
+		{# <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet"> #}
 		<link href="{{asset('assets/css/boutique.css')}}" rel="stylesheet">
 	
 
@@ -38,8 +40,8 @@
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-				<a class="navbar-brand" href="{{path('home')}}">Ma boutique</a>
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark"><i class="fa-light fa-shop"></i>
+				<a class="navbar-brand" href="{{path('home')}}"><i class="fa fa-home"></i></a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
@@ -52,7 +54,7 @@
 							<a class="nav-link" href="#">Nous découvrir </a>
 						</li>
 							<li class="nav-item active">
-							<a class="nav-link" href="#">Contacts</a>
+							<a class="nav-link" href="{{path('contact')}}">Contacts</a>
 						</li>
 
 
@@ -74,6 +76,7 @@
 		</header>
 
 		<main role="main">
+		<h1 class= "bg-info text-white container text-center shadow  p-3 my-5 ">Bienvenue dans mon site </h1>
 		{% if block ('carousel') is defined %}
 
 			<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -86,9 +89,10 @@
 					<div class="carousel-item active">
 						<svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveaspectratio="xMidYMid slice" focusable="false" role="img"><rect width="100%" height="100%" fill="#777"/></svg>
 						<div class="container">
-							<div class="carousel-caption text-left">
-								<h1>Example headline.</h1>
-								<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+							<div class="carousel-caption text-left"
+							h
+								<h1>CAMARA Daouda </h1>
+								<p>Etudiant en formation de développeur web et web mobile à l'école Web Force 3. Je suis à la recherche d'une entreprise pouvant m'accueillir pour un contrat d'apprentissage ou stagiaire à partir du 20 juin 2022. Passionné de l'informatique, j'ai toujours su que le choix de ma carrière se définie en partie par le fait que je suis un enfant où le monde ne peut que permettre une grande révolution technologique et ma part pour cete contribution est plus qu'un simple jeu de contrat. J'aime faire le développement et apporter mes compétences informatiques et qualité dans des secteurs multiples et variés. Alors si vous trouverez ce projet passionnant, n'hésitez à me contacter pour vous montrer que je suis sun vrai développeur orienté Full Stack. </p>
 								<p>
 									<a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a>
 								</p>
